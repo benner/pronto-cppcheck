@@ -43,4 +43,5 @@ pronto run --unstaged
 
 ## Changelog
 
-0.1.0 Initial public version.
+* 0.1.0 Initial public version.
+* 0.2.3 Do not enable all checks by default.
