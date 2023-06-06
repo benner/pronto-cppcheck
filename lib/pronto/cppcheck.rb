@@ -55,7 +55,7 @@ module Pronto
         if files_to_lint.empty?
           []
         else
-          cmd = "#{executable} --enable=all --template='{file}:{line}:{column}:{severity}:{id}:{message}' --quiet #{extra} #{files_to_lint}"
+          cmd = "#{executable} --template='{file}:{line}:{column}:{severity}:{id}:{message}' --quiet #{extra} #{files_to_lint}"
           _stdout, stderr, _status = Open3.capture3(cmd)
           return [] if stderr.nil?
 

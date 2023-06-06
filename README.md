@@ -8,11 +8,11 @@ tool to check C/C++ files for style issues following Google's C++ style guide.
 
 * `gem install pronto-cppcheck`
 * `pronto run`
-* `PRONTO_CPPCHECK_OPTS="-j 20 --std=c++17" pronto run` for passing CLI options
-  to `cppcheck`
+* `PRONTO_CPPCHECK_OPTS="-j 20 --std=c++17 --enable=warning" pronto run`
+    for passing CLI options to `cppcheck`
 
 Keep in mind `PRONTO_CPPCHECK_OPTS` is added to the end of existing
-(`--enable=all --template='{file}:{line},{severity},{id}:{message}' --quiet`)
+(`--template='{file}:{line},{severity},{id}:{message}' --quiet`)
 options.
 
 ## Contribution Guidelines
