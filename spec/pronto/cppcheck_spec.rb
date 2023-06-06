@@ -108,7 +108,7 @@ module Pronto
             add_to_index('best.cpp', updated_function_def)
 
             create_commit
-            ENV['PRONTO_CPPCHECK_OPTS'] = ''
+            ENV['PRONTO_CPPCHECK_OPTS'] = '--enable=all'
           end
 
           it 'returns correct error message' do
