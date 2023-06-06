@@ -71,7 +71,7 @@ module Pronto
         delete_repository
       end
 
-      let(:patches) { Pronto::Git::Repository.new(repository_dir).diff('master') }
+      let(:patches) { Pronto::Git::Repository.new(repository_dir).diff('main') }
 
       context 'patches are nil' do
         let(:patches) { nil }
