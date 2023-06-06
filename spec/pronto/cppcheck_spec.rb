@@ -34,7 +34,6 @@ module Pronto
       end
 
       it 'parses a linter output to a map' do
-        # rubocop:disable Layout/LineLength
         executable_output = [
           "src/core/aio.c:546:20:style:variableScope:The scope of the variable 'rv' can be reduced.",
           "src/core/init.c:108:10:style:knownConditionTrueFalse:Condition 'init->i_once' is always false"
@@ -57,7 +56,6 @@ module Pronto
             level: 'warning'
           }
         ]
-        # rubocop:enable Layout/LineLength
         expect(act).to eq(exp)
       end
     end
