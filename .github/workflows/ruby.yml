@@ -11,7 +11,6 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -36,5 +35,17 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
       run: sudo apt install -y cppcheck
+    - name: git remote
+      run: git remote -v
+    - name: git config
+      #run: git config pull.rebase true
+    #- name: git pull
+      run: git pull origin main || true
+    - name: git log
+      run: git log -n 10
+    - name: git branch
+      run: git branch
+    - name: git switch
+      run: git switch main && git checkout -
     - name: Run tests
       run: bundle exec rake
